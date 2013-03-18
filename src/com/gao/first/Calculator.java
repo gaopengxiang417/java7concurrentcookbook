@@ -18,6 +18,7 @@ public class Calculator implements Runnable {
         for (int i = 0; i < 10; i++) {
             System.out.printf("%s : %d * %d = %d\n",Thread.currentThread().getName(),
                     number , i , number * i);
+
         }
     }
 }
