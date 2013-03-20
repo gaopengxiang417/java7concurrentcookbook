@@ -15,6 +15,11 @@ public class ThreadGetInformationTest {
         Thread.State[] states = new Thread.State[10];
 
         //修改线程的优先级
+        /**
+         * 随碟附送
+         * 我们爱你中国
+         */
+        //随碟附送
         for (int i = 0; i < 10; i++) {
             Thread thread = new Thread(new CalculatorOne(i));
             threads[i] = thread;
