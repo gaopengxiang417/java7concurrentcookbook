@@ -9,7 +9,7 @@ import java.util.ArrayDeque;
  */
 public class DaemonMainTest {
     public static void main(String[] args) {
-        ArrayDeque<EventClass> deque = new ArrayDeque<>();
+        ArrayDeque<EventClass> deque = new ArrayDeque<EventClass>();
 
         WriterClass writerClass = new WriterClass(deque);
         for (int i = 0; i < 3; i++) {

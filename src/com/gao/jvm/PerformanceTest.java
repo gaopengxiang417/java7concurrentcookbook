@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class PerformanceTest {
     private static Long per = 1024L * 1024;
     public static void main(String[] args) {
-        ArrayList<Person> persons = new ArrayList<>();
+        ArrayList<Person> persons = new ArrayList<Person>();
         for (int i = 0; i < 10000; i++) {
             persons.add(new Person("first" , "second"));
         }
