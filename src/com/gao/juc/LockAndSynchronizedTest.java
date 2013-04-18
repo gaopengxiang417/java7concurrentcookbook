@@ -8,7 +8,7 @@ package com.gao.juc;
 public class LockAndSynchronizedTest {
     private static int value = 0;
     public static void main(String[] args) throws InterruptedException {
-        int maxCount = 10;
+        int maxCount = 100;
         final int incrementCount = 10000;
         long eclipse = 0;
         for (int i = 0; i < maxCount; i++) {
