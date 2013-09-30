@@ -4,6 +4,14 @@ package com.gao.threadmanagment;
  * User: wangchen.gpx
  * Date: 13-9-30
  * Time: 上午10:43
+ * <p><hr>
+ *     <blockquote>
+ *         <pre>
+ *             打印九九乘法表
+ *         </pre>
+ *     </blockquote>
+ * </hr>
+ * <hr></hr>
  */
 public class MyCalculator {
     public static void main(String[] args) throws InterruptedException {
