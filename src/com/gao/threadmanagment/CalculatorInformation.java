@@ -6,6 +6,8 @@ package com.gao.threadmanagment;
  * Time: 下午7:59
  * <hr>
  *     主要说明了获取线程的ID，name，priority等信息
+ *     需要说明的时候设置线程的优先级的时候必须在1-10之间，
+ *     否则会抛出 {@link IllegalArgumentException}
  * </hr>
  * <hr></hr>
  */
