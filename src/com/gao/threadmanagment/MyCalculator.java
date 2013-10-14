@@ -20,6 +20,7 @@ public class MyCalculator {
             Thread thread = new Thread(new Calculator(i));
             threads[i] = thread;
         }
+        //todo today
 
         for (Thread thread : threads) {
             thread.start();
