@@ -9,8 +9,10 @@ public class DaemonTest {
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
         myThread.start();
+        System.out.println(myThread.isDaemon());
 
 
+        System.out.println(Thread.currentThread().isDaemon());
         System.out.println("main method end....");
     }
 }
