@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
  * Time: 下午12:33
  */
 public class ValidatorMain {
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
+    public static void main(String[] args){
         String test = "test";
         UserValidator userValidator = new UserValidator(test);
         UserValidator passwordValidator = new UserValidator(test);
@@ -21,9 +21,18 @@ public class ValidatorMain {
 
         ExecutorService executorService = Executors.newCachedThreadPool();
 
-        String result = executorService.invokeAny(Arrays.asList(usernameTask, passwordTask));
-        System.out.println(result);
+        String result = null;
+        try {
+            result = executorService.invokeAny(Arrays.asList(usernameTask, passwordTask));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }finally {
 
-        executorService.shutdown();
+            System.out.println(result);
+            executorService.shutdown();
+        }
+
     }
 }
