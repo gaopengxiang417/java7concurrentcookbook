@@ -16,9 +16,11 @@ public class ScheduleMain {
 
         System.out.println("start to main ...........");
         //创建5哥线程并且去运营
+        //其实延迟调度任务就是把一个任务丢进一个阻塞队列,然后不停的轮询去调度
+        //所以导致如果线程的延迟时间够短,那么就不会按照指定的顺序来执行了,
         for (int i = 0; i < 5; i++) {
             ScheduleTask scheduleTask = new ScheduleTask("" + i);
-            service.schedule(scheduleTask, i + 1, TimeUnit.SECONDS);
+            service.schedule(scheduleTask, 10 - i, TimeUnit.NANOSECONDS);
         }
 
         service.shutdown();
