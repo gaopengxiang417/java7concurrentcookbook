@@ -7,17 +7,19 @@ package com.gao.jvm;
  */
 public class ThrowExceptionTest {
     public static void main(String[] args) {
+        try {
+            g();
+        } catch (Throwable throwable) {
 
+        }
     }
 
     static void f() {
         try {
-            throw new Throwable();
+//            throw new Throwable();
         } catch (Exception e) {
             System.out.println("f method exception");
             e.printStackTrace();
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
         }
     }
 
@@ -28,11 +30,13 @@ public class ThrowExceptionTest {
                 throw new Exception();
             } catch (Exception e) {
                 System.out.println("g method exception");
-                e.fillInStackTrace();
+                throw e.fillInStackTrace();
             }
         } catch (Exception e) {
             System.out.println("g finally exception");
             e.printStackTrace();
+        } catch (Throwable throwable) {
+            System.out.println("throwable");
         }
     }
 }
