@@ -1,4 +1,4 @@
-package concurrentcollection;
+package com.gao.concurrentcollection;
 
 import java.util.concurrent.ConcurrentLinkedDeque;
 
