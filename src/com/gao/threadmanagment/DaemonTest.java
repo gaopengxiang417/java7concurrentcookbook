@@ -14,6 +14,8 @@ public class DaemonTest {
 
         System.out.println(Thread.currentThread().isDaemon());
         System.out.println("main method end....");
+
+        System.out.println(Thread.currentThread().isDaemon());
     }
 }
 
