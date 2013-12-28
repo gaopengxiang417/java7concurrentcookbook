@@ -15,6 +15,17 @@ import java.util.Date;
  */
 public class CalendarTest {
     public static void main(String[] args) throws ParseException, IOException, InterruptedException {
+
+        Calendar calendar1 = Calendar.getInstance();
+        System.out.println(calendar1.getMaximum(Calendar.DAY_OF_MONTH));
+        System.out.println(calendar1.getActualMaximum(Calendar.DAY_OF_MONTH));
+
+        calendar1.set(Calendar.MONTH, 10);
+        System.out.println(calendar1.getTime());
+        System.out.println(calendar1.getMaximum(Calendar.DAY_OF_MONTH));
+        System.out.println(calendar1.getActualMaximum(Calendar.DAY_OF_MONTH));
+
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
         Date date = dateFormat.parse("20130731");
 

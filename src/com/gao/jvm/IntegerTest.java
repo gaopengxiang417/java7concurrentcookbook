@@ -15,5 +15,9 @@ public class IntegerTest {
         Integer three = 128;
         Integer four = 128;
         System.out.println(three == four);
+
+        Integer first = new Integer(1);
+        Integer second = new Integer(1);
+        System.out.println(first == second);
     }
 }
